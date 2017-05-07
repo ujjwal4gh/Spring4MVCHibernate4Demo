@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+// JDK 8
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    // -------------- Spring ------------------ //
+    compile 'org.springframework:spring-webmvc:4.3.7.RELEASE'
+    compile 'org.springframework:spring-tx:4.3.7.RELEASE'
+    compile 'org.springframework:spring-orm:4.3.7.RELEASE'
+    
+    // -------------- Hibernate --------------- //
+    compile 'org.hibernate:hibernate-core:4.3.11.Final'
+    compile 'org.hibernate:hibernate-validator:5.1.3.Final'
+    
+    // -------------- JSR303 Validation ------- //
+    compile 'javax.validation:validation-api:1.1.0.Final'
+    
+    // -------------- MySQL Connector --------- //
+    compile 'mysql:mysql-connector-java:5.1.38'
+    
+    // -------------- JODA Time --------------- //
+    compile 'joda-time:joda-time:2.3'
+    compile 'org.jadira.usertype:usertype.core:3.0.0.CR1'
+    
+    // -------------- ServletAPI -------------- //
+    compile 'javax.servlet:javax.servlet-api:3.1.0'
+    compile 'javax.servlet.jsp:javax.servlet.jsp-api:2.3.1'
+    
+    // -------------- JSTL -------------------- //
+    compile 'javax.servlet:jstl:1.2'
+}
